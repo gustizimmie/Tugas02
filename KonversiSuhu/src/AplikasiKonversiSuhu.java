@@ -83,7 +83,7 @@ public class AplikasiKonversiSuhu extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
         jPanel2.add(jTextField1, gridBagConstraints);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celcius ke Fahrenheit", "Celcius ke Kelvin", "Celcius ke Reamur", " " }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Pilih --", "Celcius ke Fahrenheit", "Celcius ke Kelvin", "Celcius ke Reamur", " " }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -158,6 +158,7 @@ public class AplikasiKonversiSuhu extends javax.swing.JFrame {
         jPanel2.add(jRadioButton1, gridBagConstraints);
 
         buttonGroup2.add(jRadioButton2);
+        jRadioButton2.setSelected(true);
         jRadioButton2.setText("Dari Celcius");
         jRadioButton2.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -186,19 +187,27 @@ public class AplikasiKonversiSuhu extends javax.swing.JFrame {
             double suhu = Double.parseDouble(jTextField1.getText());
             String selectedScale = (String) jComboBox1.getSelectedItem();
             double hasil = 0.0;
-
+              
             if (jRadioButton2.isSelected()) {
                 switch (selectedScale) {
                     case "Celcius ke Fahrenheit" -> hasil = (suhu * 9/5) + 32;
                     case "Celcius ke Kelvin" -> hasil = suhu + 273.15;
                     case "Celcius ke Reamur" -> hasil = suhu * 4/5;
+                    default -> {
+                    JOptionPane.showMessageDialog(this, "Pilih konversi suhu yang valid.");
+                    return;
+                    }
                 }
-            } else {
+            } else{
                 // Konversi dari skala lain ke Celsius
                 switch (selectedScale) {
                     case "Celcius ke Fahrenheit" -> hasil = (suhu - 32) * 5/9;
                     case "Celcius ke Kelvin" -> hasil = suhu - 273.15;
                     case "Celcius ke Reamur" -> hasil = suhu * 5/4;
+                    default -> {
+                    JOptionPane.showMessageDialog(this, "Pilih konversi suhu yang valid.");
+                    return;
+                    }
                 }
             }
 

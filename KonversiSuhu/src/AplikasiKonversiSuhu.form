@@ -92,11 +92,12 @@
         <Component class="javax.swing.JComboBox" name="jComboBox1">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Celcius ke Fahrenheit"/>
-                <StringItem index="1" value="Celcius ke Kelvin"/>
-                <StringItem index="2" value="Celcius ke Reamur"/>
-                <StringItem index="3" value=" "/>
+              <StringArray count="5">
+                <StringItem index="0" value="-- Pilih --"/>
+                <StringItem index="1" value="Celcius ke Fahrenheit"/>
+                <StringItem index="2" value="Celcius ke Kelvin"/>
+                <StringItem index="3" value="Celcius ke Reamur"/>
+                <StringItem index="4" value=" "/>
               </StringArray>
             </Property>
           </Properties>
@@ -187,6 +188,7 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup2"/>
             </Property>
+            <Property name="selected" type="boolean" value="true"/>
             <Property name="text" type="java.lang.String" value="Dari Celcius"/>
           </Properties>
           <Events>
