@@ -1,6 +1,4 @@
 import javax.swing.JOptionPane;
-
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -68,6 +66,8 @@ public class AplikasiKonversiSuhu extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
         jPanel2.add(jLabel3, gridBagConstraints);
 
+        jTextField1.setToolTipText("");
+        jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
